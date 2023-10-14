@@ -1,0 +1,492 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+  }
+
+  .navbar {
+    background-color: #faf8f8;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+  .brand {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: linear-gradient(45deg, #4f5bd5, #962fbf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-left: 10px;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .bar {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: 0.4s;
+  }
+
+  .menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+
+  .menu li {
+    margin: 0 15px;
+  }
+
+  .menu a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    position: relative;
+  }
+
+  .menu a:hover {
+    color: #0072b1;
+  }
+
+  .menu a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0072b1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+
+  .menu a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  @media screen and (max-width: 600px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      background-color: #ffffff;
+      position: absolute;
+      top: 65px;
+      left: 0;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    .menu.active {
+      display: flex;
+    }
+
+    .menu li {
+      margin: 15px 0;
+    }
+
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .bar {
+      background-color: #000000;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+  }
+  
+  .mainfooter {
+    background: #242528f0;
+    padding: 5px;
+    color: #fff;
+}
+footer .p {
+  line-height: 35px;
+  padding-right: 5px;
+  text-align: justify;
+
+}
+footer food {
+  padding: 15px;
+  font-size: 18px;
+}
+
+.container-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.registration-btn {
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative; /* Add this to enable positioning */
+  height: 90vh; /* Adjust the height as needed */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.carousel {
+  position: absolute; /* Position the carousel */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1; /* Set a negative z-index to place it behind the content */
+}
+
+/* Add a little extra padding to the navbar */
+.navbar {
+  padding: 20px 0;
+}
+
+/* Add margin to the content below the carousel */
+.container-btn,
+.mainfooter {
+  margin-top: 0px;
+}
+
+/* Add a little extra space between the menu items */
+.menu li {
+  margin: 0 10px;
+}
+.custom-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.custom-btn:hover {
+  background-color: #0056b3;
+}
+.button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: rgb(0 107 179);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.button:hover .icon {
+  transform: translate(4px);
+}
+
+.button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+
+.button-icon {
+  --border-radius: 15px;
+  --border-width: 4px;
+  appearance: none;
+  position: relative;
+  padding: 1em 2em;
+  border: 0;
+  background-color: #ffffff;
+  font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #030303;
+  z-index: 2;
+ }
+ 
+ .button-icon::after {
+  --m-i: linear-gradient(#ffffff, #e2e2e2);
+  --m-o: content-box, padding-box;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: var(--border-width);
+  border-radius: var(--border-radius);
+  background-image: conic-gradient(
+     #488cfb,
+     #29dbbc,
+     #ddf505,
+     #ff9f0e,
+     #e440bb,
+     #655adc,
+     #488cfb
+   );
+  -webkit-mask-image: var(--m-i), var(--m-i);
+  mask-image: var(--m-i), var(--m-i);
+  -webkit-mask-origin: var(--m-o);
+  mask-origin: var(--m-o);
+  -webkit-mask-clip: var(--m-o);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  filter: hue-rotate(0);
+  animation: rotate-hue linear 500ms infinite;
+  animation-play-state: paused;
+ }
+ 
+ .button-icon:hover::after {
+  animation-play-state: running;
+ }
+ 
+ @keyframes rotate-hue {
+  to {
+   filter: hue-rotate(1turn);
+  }
+ }
+ 
+ .button-icon,.button-icon {
+  box-sizing: border-box;
+ }
+ 
+ .button-icon:active {
+  --border-width: 5px;
+ }
+ .complaint{
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.complaint-form {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: center;
+}
+.complaint-form h1 {
+  margin: 0;
+}
+.complaint-form label {
+  font-weight: bold;
+}
+.complaint-form input[type="text"],.complaint-form input[type="number"],.complaint-form input[type="email"],
+.complaint-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: rgb(0 107 179);
+  border-radius: 9999px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+  cursor: pointer;
+}
+
+.button:hover .icon {
+  transform: translate(4px);
+}
+
+.button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.carousel-container{
+  padding: 10px;
+}
+
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 400px;
+}
+
+div.desc {
+
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: head;
+  src: url(./);
+}
+
+.str:hover {
+  font-stretch: 250%;
+  transition: all ease 0.5s;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 90%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+

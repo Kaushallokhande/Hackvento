@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Setting and Planning Guides</title>
+    <link rel="stylesheet" href="stylesabout.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        #recommend-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #recommend-container h2 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        #recommend-container ul {
+            margin-bottom: 40px;
+        }
+
+        #recommend-container li {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .mainfooter {
+            background: #020306f0;
+            padding: 50px;
+            color: #fff;
+        }
+
+        footer .p {
+            line-height: 35px;
+            padding-right: 5px;
+            text-align: justify;
+
+        }
+
+        footer food {
+            padding: 15px;
+            font-size: 18px;
+        }
+
+        .button-icon {
+            --border-radius: 15px;
+            --border-width: 4px;
+            appearance: none;
+            position: relative;
+            padding: 1em 2em;
+            border: 0;
+            background-color: #ffffff;
+            font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            color: #030303;
+            z-index: 2;
+        }
+
+        .button-icon::after {
+            --m-i: linear-gradient(#ffffff, #e2e2e2);
+            --m-o: content-box, padding-box;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: var(--border-width);
+            border-radius: var(--border-radius);
+            background-image: conic-gradient(#488cfb,
+                    #29dbbc,
+                    #ddf505,
+                    #ff9f0e,
+                    #e440bb,
+                    #655adc,
+                    #488cfb);
+            -webkit-mask-image: var(--m-i), var(--m-i);
+            mask-image: var(--m-i), var(--m-i);
+            -webkit-mask-origin: var(--m-o);
+            mask-origin: var(--m-o);
+            -webkit-mask-clip: var(--m-o);
+            mask-composite: exclude;
+            -webkit-mask-composite: destination-out;
+            filter: hue-rotate(0);
+            animation: rotate-hue linear 500ms infinite;
+            animation-play-state: paused;
+        }
+
+        .button-icon:hover::after {
+            animation-play-state: running;
+        }
+
+        @keyframes rotate-hue {
+            to {
+                filter: hue-rotate(1turn);
+            }
+        }
+
+        .button-icon,
+        .button-icon {
+            box-sizing: border-box;
+        }
+
+        .button-icon:active {
+            --border-width: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar">
+            <div class="container">
+                <button class="button-icon" onclick="simulateLink()">MyCozyCampus
+                    <div class="small"
+                        style="color: #ffad00; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: smaller; ">
+                        By fastn
+                    </div>
+                </button>
+                <div class="menu-toggle">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="complainthome.html">Complaint</a></li>
+                    <li><a href="payment.html">Payment</a></li>
+                    <li><a href="stdLogin.html">login</a></li>
+                    <li><a href="Adminmain.html">Admin Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <button id="yourGuidesBtn">About Hostel</button>
+    <button id="recommendBtn">About Mess</button>
+    <!-- <button id="recommendBtnn">About College</button> -->
+
+    <main>
+        <section id="hostelGuidelines">
+            <h2>Hostel Guidelines</h2>
+            <ol>
+                <li>
+                    <strong>Check-In and Check-Out:</strong><br>
+                    Check-In: Check-in time is from 7:00 am. Early check-in is possible based on availability.<br>
+                    Check-Out: Check-out time is 11:00 pm. Late check-out requests can be accommodated for an additional
+                    fee.
+                </li>
+                <li>
+                    <strong>Quiet Hours:</strong><br>
+                    Please observe quiet hours from 6:00 am to 11:00 am to ensure a peaceful atmosphere for all guests.
+                </li>
+                <li>
+                    <strong>Security:</strong><br>
+                    Your safety is our priority. We have 24/7 security in place. Lockers are available for your
+                    valuables; please use them.
+                </li>
+                <li>
+                    <strong>Room Rules:</strong><br>
+                    Shared dormitories are designed for comfort and shared living. Please keep your area tidy.<br>
+                    Be considerate of fellow guests' privacy and maintain appropriate behavior.<br>
+                    Lockers are available; please store your belongings securely.
+                </li>
+                <li>
+                    <strong>Common Areas:</strong><br>
+                    Our common areas are shared spaces for relaxation and socializing. Please clean up after yourself to
+                    keep these areas enjoyable for all guests.
+                </li>
+                <li>
+                    <strong>Kitchen Use:</strong><br>
+                    If you use the communal kitchen, ensure it remains clean and organized.<br>
+                    Label your food, and be considerate of others sharing the space.
+                </li>
+                <li>
+                    <strong>Respect for Others:</strong><br>
+                    Treat fellow guests with respect and courtesy, regardless of their background or beliefs.
+                </li>
+                <li>
+                    <strong>Guests and Visitors:</strong><br>
+                    Visitors are allowed in common areas but not permitted in dormitories.<br>
+                    The maximum occupancy for each room is [Max Occupancy].
+                </li>
+                <li>
+                    <strong>Social Events:</strong><br>
+                    Join our social events and activities to make the most of your stay. Details can be found on our
+                    notice board or website.
+                </li>
+                <li>
+                    <strong>Complaint Resolution:</strong><br>
+                    If you have any concerns or complaints, please inform the front desk or email us at
+                    ietdavv@gmail.com.
+                </li>
+                <li>
+                    <strong>Check-Out Procedures:</strong><br>
+                    Check-out involves returning keys, settling any outstanding bills, and ensuring the room is left in
+                    good condition.<br>
+                    Luggage storage is available after check-out.
+                </li>
+                <li>
+                    <strong>Lost and Found:</strong><br>
+                    If you lose an item during your stay, please report it to the front desk.<br>
+                    Found items will be kept for Lost and Found Retention Period.
+                </li>
+                <li>
+                    <strong>Payment and Fees:</strong><br>
+                    Payment methods accepted are [Accepted Payment Methods].<br>
+                    Additional fees may apply for services like laundry or late check-out.<br>
+                    A security deposit of 5000 may be required upon check-in.
+                </li>
+                <li>
+                    <strong>Housekeeping:</strong><br>
+                    Housekeeping services are provided once per day.<br>
+                    Guests are responsible for maintaining the cleanliness of their living spaces.
+                </li>
+                <li>
+                    <strong>Environmental Responsibility:</strong><br>
+                    We encourage eco-friendly practices such as conserving energy and water, recycling, and reducing
+                    waste.
+                </li>
+                <li>
+                    <strong>Emergency Procedures:</strong><br>
+                    In case of fire or other emergencies, follow the posted evacuation routes and contact 123456789.<br>
+                    A first-aid kit is available at the front desk.
+                </li>
+                <li>
+                    <strong>Additional Services:</strong><br>
+                    Additional services such as laundry facilities, tours, and transportation assistance are available.
+                    Inquire at the front desk for more information.
+                </li>
+                <li>
+                    <strong>Feedback and Reviews:</strong><br>
+                    Your feedback is valuable to us. Please leave a review on our website to help us improve our
+                    services.
+                </li>
+                <li>
+                    <strong>Contact Information:</strong><br>
+                    For any questions or assistance, you can reach our staff at 1256789755.
+                </li>
+            </ol>
+        </section>
+
+
+    </main>
+
+    <div id="recommend-container" style="display: none;">
+        <h2>Mess Guidelines for IET DAVV</h2>
+
+        <section>
+            <h3>Section 1: Introduction</h3>
+            <p>Welcome to IET DAVV Dining. We are pleased to offer a range of dining facilities and services designed to
+                meet your needs.</p>
+        </section>
+
+        <section>
+            <h3>Section 2: Meal Schedule</h3>
+            <p>Our meal schedule is as follows:</p>
+            <ul>
+                <li>Breakfast: 8:00 am</li>
+                <li>Lunch: 11:00 am</li>
+                <li>Dinner: 7:00 pm</li>
+            </ul>
+            <p>Please note that special meal schedules may apply on weekends or holidays.</p>
+        </section>
+
+        <section>
+            <h3>Section 3: Meal Plans</h3>
+            <h4>Breakfast:</h4>
+            <ul>
+                <li>Scrambled eggs</li>
+                <li>Toast with butter and jam</li>
+                <li>Oatmeal with honey and fruits</li>
+                <li>Fresh fruit salad</li>
+                <li>Milk, tea, or coffee</li>
+            </ul>
+
+            <h4>Lunch:</h4>
+            <ul>
+                <li>Grilled chicken or tofu (for vegetarians/vegans)</li>
+                <li>Steamed brown rice or quinoa</li>
+                <li>Steamed vegetables (broccoli, carrots, and green beans)</li>
+                <li>Salad with a variety of fresh greens and dressing</li>
+                <li>Lentil soup (optional)</li>
+                <li>Fruit yogurt (or dairy-free alternative)</li>
+                <li>Water or flavored water</li>
+            </ul>
+
+            <h4>Snack:</h4>
+            <ul>
+                <li>Mixed nuts</li>
+                <li>Fresh fruit (e.g., apples, bananas)</li>
+                <li>Hummus with carrot and cucumber sticks</li>
+                <li>Cheese and crackers (optional)</li>
+                <li>Herbal tea or water</li>
+            </ul>
+        </section>
+    </div>
+
+
+
+
+    <div id="recommend-container" style="display: none;">
+        <h2>About Us</h2>
+
+        <p>Founded in 2023-24, IET DAVV Hostal aims to offer more than just accommodation. We believe in
+            creating a vibrant, inclusive community for residents from all walks of life.</p>
+
+        <h2>Our Commitment</h2>
+
+        <ul>
+            <li>Your comfort and security are our top priorities.</li>
+            <li>We maintain impeccable standards of cleanliness and service.</li>
+            <li>A dedicated team is always ready to assist you.</li>
+        </ul>
+
+        <h2>Facilities</h2>
+
+        <ul>
+            <li>Modern, cozy rooms equipped with all the essentials.</li>
+            <li>High-speed internet to keep you connected.</li>
+            <li>Common areas for socializing and relaxation.</li>
+            <li>Secure, serene study spaces to boost productivity.</li>
+        </ul>
+
+        <h2>Events and Community</h2>
+
+        <p>Countless opportunities for making friends and memories. Regular events, workshops, and activities for all
+            interests. Movie nights, study groups, and more, fostering camaraderie.</p>
+
+    </div>
+
+
+    <footer>
+        <div class="container-fluid mainfooter ">
+            <div class="row">
+                <div class="col-md-5 text-center ">
+                    <img class="fflogo" src="ietlogo.png" style="width:40%;margin-top: 50px">
+                    <br><br>
+                </div>
+                <div class="col-md-7">
+                    <h2 class="h2"><b style="color: #ffad00;">CONTACT</b> US</h2>
+                    <p class="p">
+                        The college hostel is a vibrant hub of student life, fostering a sense of community and
+                        belonging. It provides comfortable dormitories and a supportive atmosphere for academic and
+                        personal growth.</p>
+                    <div class="row">
+                        <div class="col-md-6 food">
+                            <b style="color: #ffad00;">Address</b>
+                            <p>Institute of Engineering and Technology
+                                Devi Ahilya Vishwavidyalaya
+                                Khandwa Road Indore-452017 (M.P.)
+                                (ph): 0731-2361116 / 2361117
+                            </p>
+                        </div>
+                        <div class="col-md-6 food">
+                            <b class="para" style="color: #ffad00;">Franchise
+                                Enquiry</b>
+                            <p>Mobile: <a style="color: #ffad00;">+91
+                                    0731 236 1116: <a style="color: #ffad00;">stokekar@ietdavv.edu.in </a></p>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 food">
+                            <b class="para" style="color: #ffad00;">HR
+                                Enquiry</b>
+                            <p>Mobile: <a style="color: #ffad00;"> +91
+                                    0731 236 1116</a> <br>
+                                Email: <a style="color: #ffad00;">stokekar@ietdavv.edu.in </a></p>
+                        </div>
+                        <div class="col-md-6 food">
+                            <b class="para" style="color: #ffad00;">Other
+                                Problem</b>
+                            <p>
+                                Email: <a style="color: #ffad00;">studenthelp@ietdavv.edu.in </a></p>
+                        </div>
+                        <div _ngcontent-fyx-c2 ; class="social-icons text-left">
+                            <a _ngcontent-fyx-c2 href="https://www.linkedin.com/company/ietdavv" target="_blank"
+                                style="text-decoration: none;">
+                                <i _ngcontent-fyx-c2 class="fab fa-linkedin fa-2x"></i></a>
+                            &nbsp;
+                            &nbsp;
+                            <a _ngcontent-fyx-c2 href="https://www.facebook.com/davv.iet" target="_blank"
+                                style="text-decoration: none;">
+                                <i _ngcontent-fyx-c2 class="fab fa-facebook-square fa-2x">
+                                </i>
+                            </a>
+                            &nbsp;
+                            &nbsp;
+                            <a _ngcontent-fyx-c2 href="https://www.twitter.com/ietdavv" target="_blank"
+                                style="text-decoration: none;">
+                                <i _ngcontent-fyx-c2 class="fab fa-twitter fa-2x">
+                                </i>
+                            </a>
+                            &nbsp;
+                            &nbsp;
+                            <a _ngcontent-fyx-c2 href="https://www.instagram.com/firstfiddlerestaurants/"
+                                target="_blank" style="text-decoration: none;">
+                                <i _ngcontent-fyx-c2 class="fab fa-instagram fa-2x">
+                                </i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </div><!--row end-->
+        </div><!--container-fluid end-->
+    </footer>
+    <div class="container-fluid text-center" style="background-color: black;">
+
+        <div style="text-transform: uppercase;  color:azure;padding: 30px;">
+
+            © 2023 IET DAVV. All Rights Reserved. Website managed by IET-DAVV web development team. for any queries
+            contact at: webmaster@ietdavv.edu.in
+        </div>
+
+    </div>
+
+    <script src="scrpit.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
