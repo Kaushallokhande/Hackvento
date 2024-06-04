@@ -15,9 +15,7 @@ MyCozyCampus.com is a website dedicated to capturing and sharing memories from c
 
 ## Demo
 
-Check out the live demo of MyCozyCampus.com [here](https://hackvento.netlify.app/) *(Replace "#" with your hosted link)*.
-
-Watch the demo video [here](#)
+Check out the live demo of MyCozyCampus.com [here](https://hackvento.netlify.app/)
 
 ## Installation
 
